@@ -39,7 +39,7 @@ export class AppModule {
   }
   ngDoBootstrap() {
     const elRoot = createCustomElement(AppComponent, { injector: this.injector });
-    customElements.define('app-root', elRoot);
+    customElements.define('p-root', elRoot);
     const el = createCustomElement(CalendarComponent, { injector: this.injector });
     customElements.define('p-calendar', el);
   }

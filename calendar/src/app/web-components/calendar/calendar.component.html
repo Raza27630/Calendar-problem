@@ -7,13 +7,7 @@
     </div>
     <div class="appointment-section">
             <ng-container *ngFor="let entry of entries">
-                <div class="appointment-card"
-                    [ngStyle]="{'height.px':entry.height,'width.px':entry.width,'top.px':entry.top,'left.px':entry.left}">
-                    <div class="inner-content">
-                        <h4>Sample Item</h4>
-                        <p class="description">Sample Location</p>
-                    </div>
-                </div>
+                <app-calendar-entry [entry]="entry"></app-calendar-entry>
             </ng-container>
     </div>
 </div>
