@@ -1,0 +1,19 @@
+<div class="main-container" [ngStyle]="{'height.px':containerConst.containerHeight}">
+
+    <div class="time-section">
+        <ng-container *ngFor="let containerNum of containerCounts">
+            <label><span>{{containerNum?.timeStamp}}</span>{{ containerNum?.timeSuffix }}</label>
+        </ng-container>
+    </div>
+    <div class="appointment-section">
+            <ng-container *ngFor="let entry of entries">
+                <div class="appointment-card"
+                    [ngStyle]="{'height.px':entry.height,'width.px':entry.width,'top.px':entry.top,'left.px':entry.left}">
+                    <div class="inner-content">
+                        <h4>Sample Item</h4>
+                        <p class="description">Sample Location</p>
+                    </div>
+                </div>
+            </ng-container>
+    </div>
+</div>
