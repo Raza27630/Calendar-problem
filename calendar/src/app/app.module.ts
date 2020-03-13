@@ -4,11 +4,10 @@ import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CalendarEvent } from './interfaces/calendar-event.interface';
 import { CalendarEntryComponent } from './presentation-components/calendar-entry/calendar-entry.component';
-import { TransformToTimePipe } from './pipes/transform-to-time.pipe';
-import { AddTimeToCalendarDirective } from './directives/add-time-to-calendar.directive';
 import { CalendarComponent } from './web-components/calendar/calendar.component';
 import { createCustomElement, NgElement, WithProperties } from '@angular/elements';
 import { CommonModule } from '@angular/common';
+
 export function layOutDay(events: CalendarEvent[]) {
   const ele = document.querySelector('p-calendar');
   const parentEle = ele.parentElement;
@@ -22,8 +21,6 @@ export function layOutDay(events: CalendarEvent[]) {
   declarations: [
     AppComponent,
     CalendarEntryComponent,
-    TransformToTimePipe,
-    AddTimeToCalendarDirective,
     CalendarComponent
   ],
   imports: [

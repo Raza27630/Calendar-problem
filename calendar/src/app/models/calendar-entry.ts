@@ -9,7 +9,7 @@ export class CalendarEntry {
     constructor(event: CalendarEvent) {
         this._top = event.start;
         this._height = event.end - event.start;
-        this._left = 0;// default;
+        this._left = 10;// default bacause of padding of container element
         this._width = CALENDAR_ENTRY.containerWidth - 20;// 20 =>container padding
     }
     get top() {
